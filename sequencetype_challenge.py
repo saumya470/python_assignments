@@ -12,7 +12,5 @@ for i in range(len(distint_list)):
     if elmnt.count(ch)>0:
         for j in range(elmnt.count(ch)):
             lst2.insert(i,elmnt)
-    else:
-        print(elmnt, ': This element is not in the list')
 
 print(lst2)
