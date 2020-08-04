@@ -1,0 +1,621 @@
+[1mdiff --git a/Assignments.py b/Assignments.py[m
+[1mdeleted file mode 100644[m
+[1mindex 409a42b..0000000[m
+[1m--- a/Assignments.py[m
+[1m+++ /dev/null[m
+[36m@@ -1,129 +0,0 @@[m
+[31m-''' Week 2 challenges[m
+[31m-Standard/ built-in datatypes[m
+[31m-[m
+[31m-i.  Numeric - integer, float(dp) and complex no[m
+[31m-ii. Boolean - true or false[m
+[31m-iii. Sequence -string (characters), list (data items) and tuple (data items in parentheses)[m
+[31m-[m
+[31m-Type () function[m
+[31m-[m
+[31m-To be attempted:[m
+[31m-A.  Write a Python program which accepts the radius of a circle from the user and compute the area of the circle.[m
+[31m-B.  Write a Python program which accepts a sequence of comma-separated numbers from the user and generates a list and a tuple with those numbers. Sample data: 3, 5, 7, 23[m
+[31m-Output:[m
+[31m-List: ['3', ' 5', ' 7', ' 23'][m
+[31m-Tuple: ('3', ' 5', ' 7', ' 23')[m
+[31m-[m
+[31m-C. 	Write a Python program to test whether a number is within 100 or 1000 or 2000[m
+[31m-D.	Write a Python program to check whether a specified value is contained in a group of values. Test Data:[m
+[31m-3 -> [1, 5, 8, 3]: True[m
+[31m--1 -> [1, 5, 8, 3]: False[m
+[31m-'''[m
+[31m-#A[m
+[31m-'''[m
+[31m-print('Enter radius:')[m
+[31m-r=input()[m
+[31m-radius = float(r)[m
+[31m-area=3.14*radius*radius[m
+[31m-print('Area of the circle is:', area)[m
+[31m-[m
+[31m-#B[m
+[31m-[m
+[31m-print('Enter a sequence of comma separated values ')[m
+[31m-lst=input()[m
+[31m-lst=lst.split(',')[m
+[31m-print('Your list is:',lst)[m
+[31m-tpl=tuple(lst)[m
+[31m-print('Your tuple is:',tpl)[m
+[31m-[m
+[31m-[m
+[31m-#C[m
+[31m-print('Enter a number')[m
+[31m-num=float(input())[m
+[31m-if num<=100:[m
+[31m-    print('Number is less than or equal to 100')[m
+[31m-elif num>100 and num<=1000:[m
+[31m-    print('Num is greater than 100 and less than or equal to 1000')[m
+[31m-elif num>1000 and num<=2000:[m
+[31m-    print('Num is greater than 1000 and less than or equal to 2000')[m
+[31m-else:[m
+[31m-    print('Num is greater than 2000')[m
+[31m-[m
+[31m-#D[m
+[31m-[m
+[31m-lst=[1,5,8,3][m
+[31m-print('Enter a number:')[m
+[31m-num=int(input())[m
+[31m-if num in lst:[m
+[31m-    print('True')[m
+[31m-else:[m
+[31m-    print('False')[m
+[31m-[m
+[31m-[m
+[31m-# Assignment on Operators and operands - Week 3[m
+[31m-print('Enter the marks of 5 subjects separated by space')[m
+[31m-lst=[int(marks) for marks in input().split(' ')][m
+[31m-per=int(sum(lst)/len(lst))[m
+[31m-#print('The average is:',per)[m
+[31m-if (per>=90):[m
+[31m-    print('Grade is: A')[m
+[31m-elif(per>=80 and per<90):[m
+[31m-    print('Grade is: B')[m
+[31m-elif (per>=70 and per<80):[m
+[31m-    print('Grade is: C')[m
+[31m-elif(per>=60 and per<70 ):[m
+[31m-    print('Grade is: D')[m
+[31m-else:[m
+[31m-    print('Grade is: F')[m
+[31m-[m
+[31m-#Assignment on Input and Output - Week 3[m
+[31m-[m
+[31m-name = input('Enter your name:')[m
+[31m-marks = [int(marks) for marks in input('Enter your marks for 3 subjects separated by space:').split(' ')][m
+[31m-print(name, ', your marks are', marks)[m
+[31m-'''[m
+[31m-'''[m
+[31m-#Assignment Sequence Type week 3[m
+[31m-import re [m
+[31m-import fnmatch[m
+[31m-str_list = [str(str_list) for str_list in input('Enter your list of words separated by spaces and a character ch').split(' ')][m
+[31m-print('Your list is:', str_list)[m
+[31m-[m
+[31m-filtered = fnmatch.filter(str_list,'ch*')[m
+[31m-print(filtered.count('ch'))[m
+[31m-'''[m
+[31m-from collections import Counter[m
+[31m-lst1 = input('Enter string elements separated by space:').split(' ')[m
+[31m-ch=input('Enter the character to find:')[m
+[31m-print('List 1:', lst1)[m
+[31m-#lst1 = ['church','church','chair','choir','kite','kitten'][m
+[31m-distint_list=list(Counter(lst1).keys())[m
+[31m-lst2=[][m
+[31m-print('List 2:', lst2)[m
+[31m-print('DList 1:', distint_list)[m
+[31m-#Take it[m
+[31m-print('List1 is',lst1)[m
+[31m-print('List2 is',lst2)[m
+[31m-#for i in range(len(lst)):[m
+[31m-for i in range(len(distint_list)):[m
+[31m-    elmnt=distint_list[i][m
+[31m-    #print(elmnt.count(ch))[m
+[31m-    if elmnt.count(ch)>0:[m
+[31m-        print(elmnt, ': This element is in the list')[m
+[31m-        for j in range(elmnt.count(ch)):[m
+[31m-            lst2.insert(i,elmnt)[m
+[31m-    else:[m
+[31m-        print(elmnt, ': This element is not in the list')[m
+[31m-print(lst2)[m
+[31m-        [m
+[31m-'''[m
+[31m-#Implementing wildcard[m
+[31m-mystr='bechurchchbbbchbbbbcnh'[m
+[31m-pattern='ch'[m
+[31m-print(mystr.count(pattern))[m
+[31m-[m
+[31m-'''[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-[m
+[1mdiff --git a/Operators/Datatypes.py b/Operators/Datatypes.py[m
+[1mdeleted file mode 100644[m
+[1mindex 9e2ca6e..0000000[m
+[1m--- a/Operators/Datatypes.py[m
+[1m+++ /dev/null[m
+[36m@@ -1,63 +0,0 @@[m
+[31m-'''In Python, we do not need to explicity define a datatype. The variables automatically assign itself[m
+[31m-In Python datatypes are categorized into 5 types-[m
+[31m-1. None type (NaN) which means no value[m
+[31m-2. Integer - int, float, complex, binary, hexa, octa[m
+[31m-3. Sequences - str, bytes, bytearray, list, tuple, range[m
+[31m-4. Sets[m
+[31m-5. Mappings[m
+[31m-type is used to understand what datatype is tored in a variable[m
+[31m-'''[m
+[31m-[m
+[31m-# Integer dataType[m
+[31m-a=100[m
+[31m-b=-72[m
+[31m-c=0[m
+[31m-print(a,b,c)[m
+[31m-print(type(a),type(b),type(c))[m
+[31m-[m
+[31m-# Float[m
+[31m-x = 1.2[m
+[31m-y=0.0[m
+[31m-print(x,y)[m
+[31m-print(type(x),type(y))[m
+[31m-[m
+[31m-#Complex dataType[m
+[31m-d=5+7j[m
+[31m-print(d)[m
+[31m-print(type(d))[m
+[31m-[m
+[31m-#Binary type, starts with 0B[m
+[31m-e=0B1011[m
+[31m-print(e)[m
+[31m-print(type(e))[m
+[31m-[m
+[31m-#Hexadecimal number starts with 0X (0 1 2 3 4 5 6 7 8 9 A B C D E F)[m
+[31m-f=0X7F[m
+[31m-print(f)[m
+[31m-print(type(f))[m
+[31m-[m
+[31m-#Octadecimal number starts with 0O (digits 0 to 7)[m
+[31m-g=0O17[m
+[31m-print(g)[m
+[31m-print(type(g))[m
+[31m-[m
+[31m-#Bool[m
+[31m-h=True[m
+[31m-print(type(h))[m
+[31m-print(9<8) #returns False[m
+[31m-[m
+[31m-#Convert datatypes by int function[m
+[31m-i=int(x)[m
+[31m-print(type(i))[m
+[31m-[m
+[31m-#Convert string to Float using float function, binary, Hexadecimal and Octal[m
+[31m-j=float("22.5")[m
+[31m-print(j)[m
+[31m-print(type(j))[m
+[31m-[m
+[31m-k=bin(10)[m
+[31m-print(k)[m
+[31m-[m
+[31m-print(hex(10))[m
+[31m-[m
+[31m-print(oct(10))[m
+[1mdiff --git a/Operators/SequenceTypes.py b/Operators/SequenceTypes.py[m
+[1mdeleted file mode 100644[m
+[1mindex 583fb16..0000000[m
+[1m--- a/Operators/SequenceTypes.py[m
+[1m+++ /dev/null[m
+[36m@@ -1,64 +0,0 @@[m
+[31m-'''Sequence of values such as a List, Sets and Dictionary[m
+[31m-'''[m
+[31m-# String operations[m
+[31m-[m
+[31m-s='You are awesome'[m
+[31m-print(s)[m
+[31m-#Multiple lines[m
+[31m-s1='''You are[m
+[31m-the[m
+[31m-creator of[m
+[31m-your destiny'''[m
+[31m-print(s1)[m
+[31m-[m
+[31m-#Indexing[m
+[31m-print(s[0])[m
+[31m-print(s[2])[m
+[31m-[m
+[31m-#Printing multiple times/ repeatition[m
+[31m-print(s1*2)[m
+[31m-[m
+[31m-#length of a variable[m
+[31m-print(len(s1))[m
+[31m-[m
+[31m-#Slicing a string - It DOES NOT include the character at the ending index[m
+[31m-print(s[0:5])[m
+[31m-print(s[0:]) #No ending index defined - This goes till the end from 0 index[m
+[31m-print(s[:9]) #No starting index defined - It goes from 0 to 8[m
+[31m-print(s[8:])[m
+[31m-print(s[-3:-1]) #-1 means the last character of the string, so this will start printing from o and print m but does not include e[m
+[31m-# Step value[m
+[31m-print(s[0:10:2]) # 2 is the defined step number, i.e., it will print the alternate characters[m
+[31m-print(s[::-1]) # Printing in reverse order, no start or end defined but will decreament[m
+[31m-[m
+[31m-[m
+[31m-#Strip spaces[m
+[31m-t='    You             are awesome    '[m
+[31m-print(len(t))[m
+[31m-print(t.strip()) # strips at beginning and ending[m
+[31m-print(t.lstrip()) # Strips left spaces[m
+[31m-print(len(t.rstrip())) # Strips right spaces[m
+[31m-[m
+[31m-u='Hello'[m
+[31m-print(u[::-1]) # printing in reverse[m
+[31m-[m
+[31m-# Find a substring[m
+[31m-print(s.find('awe'))[m
+[31m-print(s.find('aw',0,len(s))) # Defining the start and ending points[m
+[31m-print(s.find('aw',0,7))# returns -1 if it cannot find[m
+[31m-# Find occurrence of substring[m
+[31m-print(s.count('a'))[m
+[31m-#Replacing text[m
+[31m-print(s.replace('awesome','super'))[m
+[31m-[m
+[31m-# Find UPPER, lower and Title case[m
+[31m-print(s.upper())[m
+[31m-print(s.lower())[m
+[31m-print(s.title())[m
+[31m-[m
+[31m-[m
+[31m-o=10[m
+[31m-p=20.54[m
+[31m-q=True[m
+[31m-r='I am the best'[m
+[31m-print(o,p,q,r)[m
+[1mdiff --git a/Operators/arithmeticoperators.py b/Operators/arithmeticoperators.py[m
+[1mdeleted file mode 100644[m
+[1mindex 92bc946..0000000[m
+[1m--- a/Operators/arithmeticoperators.py[m
+[1m+++ /dev/null[m
+[36m@@ -1,8 +0,0 @@[m
+[31m-a,b=10,5[m
+[31m-print('Addition:',a+b)[m
+[31m-print('Subtraction',a-b)[m
+[31m-print('Multiplication:',a*b)[m
+[31m-print('Division:',a/b)[m
+[31m-print('Mod:',a%b)[m
+[31m-print('Power:',a**b)[m
+[31m-print('Floor Division or Integer Division:',a//b) #Drops the decimal part[m
+\ No newline at end of file[m
+[1mdiff --git a/Operators/assignmentoperators.py b/Operators/assignmentoperators.py[m
+[1mdeleted file mode 100644[m
+[1mindex 599812b..0000000[m
+[1m--- a/Operators/assignmentoperators.py[m
+[1m+++ /dev/null[m
+[36m@@ -1,10 +0,0 @@[m
+[31m-a=b=c=10[m
+[31m-print(a,b,c)[m
+[31m-[m
+[31m-x,y=10,5[m
+[31m-print(x,y)[m
+[31m-x+=y #x=x+y[m
+[31m-print(x,y)[m
+[31m-x*=y #x=x*y[m
+[31m-print(x,y)[m
+[31m-[m
+[1mdiff --git a/Operators/bytesandarray.py b/Operators/bytesandarray.py[m
+[1mdeleted file mode 100644[m
+[1mindex a9de537..0000000[m
+[1m--- a/Operators/bytesandarray.py[m
+[1m+++ /dev/null[m
+[36m@@ -1,18 +0,0 @@[m
+[31m-# Bytes and bytearray[m
+[31m-#Create a fromlist[m
+[31m-lst=[10,20,30,40][m
+[31m-print(type(lst))[m
+[31m-[m
+[31m-#Convert to byte which can have values in the range 0<=x<256[m
+[31m-b=bytes(lst)[m
+[31m-print(type(b))[m
+[31m-print(b)[m
+[31m-#b[3]=33 # This gives an error[m
+[31m-[m
+[31m-b1=bytearray(lst)[m
+[31m-print(type(b1))[m
+[31m-print(b1)[m
+[31m-b1[3]=33[m
+[31m-print(b1)[m
+[31m-# Indexing can be  done on bytearrays but not bytes. No slicing or repeatition can[m
+[31m-# be done on either[m
+[1mdiff --git a/Operators/comparisonoperators.py b/Operators/comparisonoperators.py[m
+[1mdeleted file mode 100644[m
+[1mindex 768f77c..0000000[m
+[1m--- a/Operators/comparisonoperators.py[m
+[1m+++ /dev/null[m
+[36m@@ -1,7 +0,0 @@[m
+[31m-x,y=77,88[m
+[31m-print(x==y)[m
+[31m-print(x!=y)[m
+[31m-print(x>y)[m
+[31m-print(x<y)[m
+[31m-print(x>=y)[m
+[31m-print(x<=y)[m
+[1mdiff --git a/Operators/dicttype.py b/Operators/dicttype.py[m
+[1mdeleted file mode 100644[m
+[1mindex 238c297..0000000[m
+[1m--- a/Operators/dicttype.py[m
+[1m+++ /dev/null[m
+[36m@@ -1,50 +0,0 @@[m
+[31m-'''dict1={1:'John',2:'Bob',3:'Bill'}[m
+[31m-print(dict1)[m
+[31m-print(type(dict1))[m
+[31m-print(dict1.items())[m
+[31m-print(dict1.keys())[m
+[31m-print(dict1.values())[m
+[31m-[m
+[31m-[m
+[31m-k=dict1.keys()[m
+[31m-for i in k:[m
+[31m-    print(i)[m
+[31m-[m
+[31m-v=dict1.values()[m
+[31m-for i in v:[m
+[31m-    print(i)[m
+[31m-[m
+[31m-#Print the values via key[m
+[31m-print(dict1[2])[m
+[31m-[m
+[31m-#Delete via keys[m
+[31m-del dict1[2][m
+[31m-print(dict1)[m
+[31m-'''[m
+[31m-[m
+[31m-#Assignment[m
+[31m-lst = ['India','Nepal','Bhutan'][m
+[31m-print(lst)[m
+[31m-#Adding a country in the end[m
+[31m-lst.append('Sri Lanka')[m
+[31m-print(lst)[m
+[31m-#Removing a country by index[m
+[31m-del(lst[0])[m
+[31m-print(lst)[m
+[31m-#Adding a country in the middle[m
+[31m-lst.insert(1,'China')[m
+[31m-print(lst)[m
+[31m-[m
+[31m-#Similarly for sets[m
+[31m-s1={'India','Australia','Spain'}[m
+[31m-print(s1)[m
+[31m-[m
+[31m-#Adding a coutry in the set[m
+[31m-s1.update(['Sri Lanka'])[m
+[31m-print(s1)[m
+[31m-#removing a country from the set[m
+[31m-s1.remove('India')[m
+[31m-print(s1)[m
+[31m-#Adding a country[m
+[31m-s1.update(['Italy'])[m
+[31m-print(s1)[m
+[1mdiff --git a/Operators/listtype.py b/Operators/listtype.py[m
+[1mdeleted file mode 100644[m
+[1mindex e7b106e..0000000[m
+[1m--- a/Operators/listtype.py[m
+[1m+++ /dev/null[m
+[36m@@ -1,42 +0,0 @@[m
+[31m-#Empty list[m
+[31m-l1=[][m
+[31m-print(l1)[m
+[31m-[m
+[31m-#Adding different kind of elements[m
+[31m-l2=[10,20.5,'Saumya',-5,False][m
+[31m-print(l2)[m
+[31m-#Indexing[m
+[31m-print(l2[2])[m
+[31m-#Slicing[m
+[31m-print(l2[3:5])[m
+[31m-#Repeatition[m
+[31m-print(l2*4)[m
+[31m-#Length of list[m
+[31m-print(len(l2))[m
+[31m-[m
+[31m-# 3 methods to dynamically add or remove elements from a list[m
+[31m-l2.append(49)[m
+[31m-print(l2)[m
+[31m-#Delete by value[m
+[31m-l2.remove('Saumya')[m
+[31m-print(l2)[m
+[31m-# Delete by index[m
+[31m-del(l2[1])[m
+[31m-print(l2)[m
+[31m-[m
+[31m-# Remove allelements fromlist[m
+[31m-l2.clear()[m
+[31m-print(l2)[m
+[31m-#Min max[m
+[31m-l3=[10,20.5,49,-15][m
+[31m-print(l3)[m
+[31m-print(max(l3))[m
+[31m-print(min(l3))[m
+[31m-[m
+[31m-l3.insert(2,99) #Insert(index,value)[m
+[31m-print(l3)[m
+[31m-[m
+[31m-l3.sort()#Sorting[m
+[31m-print(l3)[m
+[31m-l3.sort(reverse=True)#Sort in descending order[m
+[31m-print(l3)[m
+[1mdiff --git a/Operators/logicaloperators.py b/Operators/logicaloperators.py[m
+[1mdeleted file mode 100644[m
+[1mindex 44717b6..0000000[m
+[1m--- a/Operators/logicaloperators.py[m
+[1m+++ /dev/null[m
+[36m@@ -1,9 +0,0 @@[m
+[31m-# and, or and not, used against boolean operators[m
+[31m-[m
+[31m-x=25[m
+[31m-y=31[m
+[31m-[m
+[31m-print(x==20 and y==30)[m
+[31m-print(x==20 or y==30)[m
+[31m-print(not(x==20 or y==30))[m
+[31m-[m
+[1mdiff --git a/Operators/rangetype.py b/Operators/rangetype.py[m
+[1mdeleted file mode 100644[m
+[1mindex f4db366..0000000[m
+[1m--- a/Operators/rangetype.py[m
+[1m+++ /dev/null[m
+[36m@@ -1,11 +0,0 @@[m
+[31m-r=range(5) #This contains elements from 0 to 4[m
+[31m-for i in r:[m
+[31m-    print(i)[m
+[31m-[m
+[31m-r1=range(1,6) #Defining start and end elements[m
+[31m-for i in r1:[m
+[31m-    print(i)[m
+[31m-[m
+[31m-r2=range(1,15,3) # Defining the step[m
+[31m-for i in r2:[m
+[31m-    print(i)[m
+[1mdiff --git a/Operators/settype.py b/Operators/settype.py[m
+[1mdeleted file mode 100644[m
+[1mindex 718a6e2..0000000[m
+[1m--- a/Operators/settype.py[m
+[1m+++ /dev/null[m
+[36m@@ -1,22 +0,0 @@[m
+[31m-#Does not allow duplicates; defined by curly  braces[m
+[31m-[m
+[31m-s={10,20,30,'xyz',10,5}[m
+[31m-print(s)[m
+[31m-print(type(s))[m
+[31m-[m
+[31m-# To update set[m
+[31m-s.update([77,4])[m
+[31m-print(s)[m
+[31m-[m
+[31m-#Since sets do not guarantee any order, we cannot slice, index or repeatition[m
+[31m-#print(s[0])[m
+[31m-#print(s*3)[m
+[31m-[m
+[31m-#To Remove[m
+[31m-s.remove(10)[m
+[31m-print(s)[m
+[31m-[m
+[31m-#Frozen set - does not allow to perform update/remove operations[m
+[31m-f=frozenset(s)[m
+[31m-print(f)[m
+[31m-#f.remove(4) #gives and error[m
+[1mdiff --git a/Operators/tupletypes.py b/Operators/tupletypes.py[m
+[1mdeleted file mode 100644[m
+[1mindex 3ecbc4a..0000000[m
+[1m--- a/Operators/tupletypes.py[m
+[1m+++ /dev/null[m
+[36m@@ -1,33 +0,0 @@[m
+[31m-'''Tuple is a list which cannot be modified[m
+[31m-i.e., we cannot use methods like append(), extend(), insert(), remove(), clear()[m
+[31m-'''[m
+[31m-tpl=()[m
+[31m-print(tpl)[m
+[31m-[m
+[31m-tpl=(40,50,40,'XYZ')[m
+[31m-print(tpl)[m
+[31m-print(type(tpl)) # This considers is class Tuple[m
+[31m-[m
+[31m-#Difference of a comma -[m
+[31m-#For a single element in a list or tuple, ALWAYS use a comma at the end[m
+[31m-tpl=(40)[m
+[31m-print(type(tpl)) # Considers int[m
+[31m-[m
+[31m-tpl=(40,) # Considers a tuple[m
+[31m-print(type(tpl))[m
+[31m-#Indexing[m
+[31m-tpl=(2,5,8,1,-10,'abc')[m
+[31m-print(tpl[4])[m
+[31m-#Repeatition[m
+[31m-print(tpl*3)[m
+[31m-#Counting the elements[m
+[31m-print(tpl.count(5))[m
+[31m-print(tpl.index('abc'))[m
+[31m-[m
+[31m-lst=[67,34,34,'xyz'][m
+[31m-print(lst)[m
+[31m-print(type(lst))[m
+[31m-#Converting a list to Tuple[m
+[31m-tpl1 = tuple(lst)[m
+[31m-print(tpl1)[m
+[31m-print(type(tpl1))[m
+[1mdiff --git a/inputfun.py b/inputfun.py[m
+[1mdeleted file mode 100644[m
+[1mindex 46d0d8f..0000000[m
+[1m--- a/inputfun.py[m
+[1m+++ /dev/null[m
+[36m@@ -1,23 +0,0 @@[m
+[31m-#s=input()[m
+[31m-#print(s)[m
+[31m-[m
+[31m-#Typecast - by default input is string[m
+[31m-'''[m
+[31m-s=input('Enter the day:')[m
+[31m-print(s)[m
+[31m-[m
+[31m-#Input an integer[m
+[31m-i=int(input('Enter an integer number'))[m
+[31m-print(i)[m
+[31m-print(type(i))[m
+[31m-'''[m
+[31m-[m
+[31m-#Entering multiple inputs, we are adding them in a list, by default split() uses space[m
+[31m-'''[m
+[31m-lst=[x for x in input('Enter three numbers separated by space').split()][m
+[31m-print(lst)[m
+[31m-'''[m
+[31m-[m
+[31m-#Converting the input to int[m
+[31m-lst=[int(x) for x in input('Enter three numbers separated by commas').split(',')][m
+[31m-print(lst)[m
+[1mdiff --git a/printfun.py b/printfun.py[m
+[1mdeleted file mode 100644[m
+[1mindex b35e4fc..0000000[m
+[1m--- a/printfun.py[m
+[1m+++ /dev/null[m
+[36m@@ -1,18 +0,0 @@[m
+[31m-print()[m
+[31m-print('Hello*3')[m
+[31m-print('All the power \nis within you')[m
+[31m-a,b=10,20[m
+[31m-print(a,b)[m
+[31m-print(a,b,sep=',')[m
+[31m-print(a,b,sep='+++++++\n++++++')[m
+[31m-[m
+[31m-student_name='John'[m
+[31m-marks=89.9546[m
+[31m-print('Name is:',student_name,'\nMarks are:',marks)[m
+[31m-#Similarly keep a placeholder such as %i for integer,%f for float,%s for string[m
+[31m-print('Name is: %s\nMarks are: %f'%(student_name,marks))[m
+[31m-print('Name is: %s\nMarks are: %.2f'%(student_name,marks)) #Formatting the decimal point numbers[m
+[31m-#Using string as a method, curly braces are used as placeholders[m
+[31m-print('Name is: {}\nMarks are:{}'.format(student_name,marks))[m
+[31m-#Using index in above statement[m
+[31m-print('Name is: {0}\nMarks are: {1}'.format(student_name,marks))[m
+\ No newline at end of file[m
+[1mdiff --git a/sequencetype_challenge.py b/sequencetype_challenge.py[m
+[1mdeleted file mode 100644[m
+[1mindex 181a51a..0000000[m
+[1m--- a/sequencetype_challenge.py[m
+[1m+++ /dev/null[m
+[36m@@ -1,16 +0,0 @@[m
+[31m-from collections import Counter[m
+[31m-[m
+[31m-lst1 = input('Enter string elements separated by space:').split(' ')[m
+[31m-ch=input('Enter the character to find:')[m
+[31m-[m
+[31m-[m
+[31m-distint_list=list(Counter(lst1).keys())[m
+[31m-lst2=[][m
+[31m-[m
+[31m-for i in range(len(distint_list)):[m
+[31m-    elmnt=distint_list[i][m
+[31m-    if elmnt.count(ch)>0:[m
+[31m-        for j in range(elmnt.count(ch)):[m
+[31m-            lst2.insert(i,elmnt)[m
+[31m-[m
+[31m-print(lst2)[m

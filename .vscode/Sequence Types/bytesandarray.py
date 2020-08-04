@@ -1,4 +1,4 @@
-# Bytes and bytearray
+'''# Bytes and bytearray
 #Create a fromlist
 lst=[10,20,30,40]
 print(type(lst))
@@ -16,3 +16,17 @@ b1[3]=33
 print(b1)
 # Indexing can be  done on bytearrays but not bytes. No slicing or repeatition can
 # be done on either
+'''
+
+str_text = 'Hello'
+print(str_text)
+byte_text = str_text.encode()
+print(byte_text)
+new_str_text = byte_text.decode('utf-8')
+print(new_str_text)
+'''
+lst = ['h','i']
+print(lst)
+byte_text = bytes(lst)
+print(byte_text)
+#print(byte_text.decode('utf-8'))'''

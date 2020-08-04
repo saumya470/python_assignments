@@ -1,0 +1,1 @@
+num_lst = input('Enter the numbers of the list separated by space')

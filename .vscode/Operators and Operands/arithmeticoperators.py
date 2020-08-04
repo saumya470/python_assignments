@@ -1,4 +1,4 @@
-a,b=10,5
+a,b=1,10
 print('Addition:',a+b)
 print('Subtraction',a-b)
 print('Multiplication:',a*b)
